@@ -12,6 +12,7 @@ The SMABackTest class is capable of returning graphs and dataframes on the perfo
 * getDataFrame()
 ![alt text](pictures/gettingDataFrame.jpg)
 * runStrategy()
+
 ![alt text](pictures/runningStrategy.jpg)
 * plotReturns()
 ![alt text](pictures/plottingReturns.jpg)
