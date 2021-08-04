@@ -243,5 +243,7 @@ class SMABackTest(object):
     
 if __name__ == '__main__':
     ups = SMABackTest(ticker="UPS")
-    print(f"The original strategy of SMA{ups.short_window} & SMA{ups.long_window} returns:{ups.runStrategy()}")
-    print(ups.optimize_parameters((20, 60, 1), (20, 110, 1)))
+    print(f"Running SMA Backtest for {ups.ticker}.")
+    print(f"The original strategy of SMA{ups.short_window} & SMA{ups.long_window} returns: {ups.runStrategy()}")
+    print(f"Optimizing...")
+    print(f"The best windows with the best return is: {ups.optimize_parameters((20, 60, 1), (20, 110, 1))}")
