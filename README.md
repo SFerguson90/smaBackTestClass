@@ -1,9 +1,9 @@
 # SMA Back Tester Class
 
 ## Purpose
-    The purpose of this python class is to backtest an SMA trading strategy. The idea is to go long when the shorter window's value is higher than the longer window's value and to short the stock when the shorter window's value is less than the longer window's value.
+The purpose of this python class is to backtest an SMA trading strategy. The idea is to go long when the shorter window's value is higher than the longer window's value and to short the stock when the shorter window's value is less than the longer window's value.
 
-    The SMABackTest class is capable of returning graphs and dataframes on the performance of the trading strategy. There is also an optimizer function, which will test a range of short and long windows for the optimal trading strategy of the given time range. 
+The SMABackTest class is capable of returning graphs and dataframes on the performance of the trading strategy. There is also an optimizer function, which will test a range of short and long windows for the optimal trading strategy of the given time range. 
 
 ## Methods
 * getDataFrame()
