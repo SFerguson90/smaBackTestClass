@@ -1,5 +1,14 @@
 # SMA Back Tester Class
 
+## Methods
+* getDataFrame()
+* runStrategy()
+* plotReturns()
+* plotCrossover()
+* evaluatePortfolio()
+* set_parameters(short_window, long_window)
+* optimize_parameters(short_range, long_range) 
+
 ## Dependencies
 * Pandas v1.1.3
 * NumPy v1.19.2

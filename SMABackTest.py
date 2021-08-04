@@ -160,7 +160,7 @@ class SMABackTest(object):
     def evaluatePortfolio(self):
         
         """
-        Shows important financial ratios of asset
+         Shows important financial ratios of asset
         """
         
         if self.results is None:
@@ -212,7 +212,7 @@ class SMABackTest(object):
         
     def set_parameters(self, short_window=None, long_window=None):
         """
-         sets parameters of SMA strategy
+         Sets parameters of SMA strategy
         """
         
         if short_window is not None:
@@ -241,7 +241,7 @@ class SMABackTest(object):
         opt = brute(self.update_and_run, (short_range, long_range), finish=None)
         return opt, -self.update_and_run(opt)
     
-#if __name__ == '__main__':
-#    ups = Asset(ticker="UPS")
-#    print(f"The original strategy of SMA{ups.short_window} & SMA{ups.long_window} returns:{ups.runStrategy()}")
-#    print(ups.optimize_parameters((20, 60, 1), (20, 110, 1)))
+if __name__ == '__main__':
+    ups = SMABackTest(ticker="UPS")
+    print(f"The original strategy of SMA{ups.short_window} & SMA{ups.long_window} returns:{ups.runStrategy()}")
+    print(ups.optimize_parameters((20, 60, 1), (20, 110, 1)))
