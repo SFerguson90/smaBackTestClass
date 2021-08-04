@@ -34,3 +34,7 @@ The SMABackTest class is capable of returning graphs and dataframes on the perfo
 * MatPlotLib.PyPlot v3.3.2
 * yFinance v0.1.63
 * SciPy v1.5.2)
+
+## Test case in Jupyter Notebook
+
+ ![JupyterNotebook Test](pictures/quickTestNIO.jpg)
