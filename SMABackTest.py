@@ -14,7 +14,12 @@ warnings.filterwarnings("ignore")
 
 class SMABackTest(object):
 
-    def __init__(self, ticker: str, short_window=30, long_window=50, period="ytd", interval="1h"):
+    def __init__(self,
+        ticker: str,
+        short_window: int = 30,
+        long_window: int = 50,
+        period: str = "ytd",
+        interval: str = "1h"):
         
         """
         Class for backtesting of SMA-based trading strategies.
@@ -47,7 +52,7 @@ class SMABackTest(object):
         self.initial_capital = 10000
         self.getDataFrame()
 
-    def getDataFrame(self):
+    def getDataFrame(self) -> None:
         
         """
         Creates a DataFrame of the asset with a short SMA, long SMA,
@@ -78,10 +83,6 @@ class SMABackTest(object):
         self.df = df
         
     def runStrategy(self):
-        
-        """
-         Backtests trading strategy
-        """
 
         # DATA
         df = self.df.copy().dropna()
@@ -127,9 +128,7 @@ class SMABackTest(object):
         
 
     def plotReturns(self):
-        
-        """
-         Plots the cumulative returns of the strategy vs buying and holding.
+        """Plots the cumulative returns of the strategy vs buying and holding.
         """
         
         if self.results is None:
@@ -142,9 +141,7 @@ class SMABackTest(object):
             .plot(title=title,figsize=(10, 6))
         
     def plotCrossover(self):
-        
-        """
-         Plots the short and long SMA windows next to the price of the asset.
+        """Plots the short and long SMA windows next to the price of the asset.
         """
         
         if self.df is None:
@@ -158,9 +155,7 @@ class SMABackTest(object):
             .plot(title=title, figsize=(10,6))
         
     def evaluatePortfolio(self):
-        
-        """
-         Shows important financial ratios of asset
+        """Shows important financial ratios of asset
         """
         
         if self.results is None:
@@ -171,12 +166,8 @@ class SMABackTest(object):
         # Portfolio Evaluation
 
         # Prepare DataFrame for metrics
-        metrics = [
-            'Annual Return',
-            'Cumulative Returns',
-            'Annual Volatility',
-            'Sharpe Ratio',
-            'Sortino Ratio']
+        metrics = ['Annual Return', 'Cumulative Returns', 'Annual Volatility',
+                    'Sharpe Ratio',    'Sortino Ratio']
         columns = ['Backtest']
 
         # Initialize the DataFrame with index set to evaluation metrics and column as `Backtest` (just like PyFolio)
